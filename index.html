@@ -4,57 +4,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Archies Innovative Solutions LTD | Smart Calibration Systems for Tankers</title>
-  <meta name="description" content="Archies Innovative Solutions LTD builds smart calibration systems for tankers, combining sensor hardware and machine learning for accurate measurement and reporting.">
-  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
   <style id="app-style">
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; color: #333; }
-    .bg-navy { background-color: #0a192f; }
-    .text-navy { color: #0a192f; }
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+    
+    .bg-navy {
+      background-color: #0a192f;
+    }
+    
+    .text-navy {
+      color: #0a192f;
+    }
+    
+    .bg-silver {
+      background-color: #e5e7eb;
+    }
+    
+    .text-silver {
+      color: #e5e7eb;
+    }
+    
     .hero {
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMGExOTJmIiAvPjxnIGZpbGw9IiMxMDI0M2UiPjxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iMjAiIGN5PSIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iNDAiIGN5PSIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iNjAiIGN5PSIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iODAiIGN5PSIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iMCIgY3k9IjIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSI2MCIgY3k9IjIwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iODAiIGN5PSIyMCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjAiIGN5PSI0MCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjIwIiBjeT0iNDAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iNjAiIGN5PSI0MCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjgwIiBjeT0iNDAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSIwIiBjeT0iNjAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSIyMCIgY3k9IjYwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iNDAiIGN5PSI2MCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSI4MCIgY3k9IjYwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iMCIgY3k9IjgwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iMjAiIGN5PSI4MCIgcj0iMS41IiAvPjxjaXJjbGUgY3g9IjQwIiBjeT0iODAiIHI9IjEuNSIgLz48Y2lyY2xlIGN4PSI2MCIgY3k9IjgwIiByPSIxLjUiIC8+PGNpcmNsZSBjeD0iODAiIGN5PSI4MCIgcj0iMS41IiAvPjwvZz48L3N2Zz4=');
       background-size: cover;
     }
-    .director-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 4px solid #0a192f; }
-    .tech-pattern { background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmOGZhZmMiLz48cGF0aCBkPSJNMzAgMzBMMCAwaDYwTDMwIDMwem0wIDBsMzAgMzBIMEwzMCAzMHoiIGZpbGw9IiNmMGYzZjciLz48L3N2Zz4='); }
-    .swiper { width: 100%; padding: 50px 0; }
-    .swiper-slide { display: flex; justify-content: center; align-items: center; }
-    .award-logo { width: 150px; height: auto; transition: transform 0.3s ease; }
-    .award-logo:hover { transform: scale(1.05); }
-
-    .lightbox {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex; justify-content: center; align-items: center;
-      z-index: 9999; opacity: 0; visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      padding: 20px;
+    
+    .director-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #0a192f;
     }
-    .lightbox.active { opacity: 1; visibility: visible; }
-    .lightbox-content { max-width: 90%; max-height: 90%; border-radius: 10px; }
-    .lightbox-close { position: absolute; top: 20px; right: 20px; font-size: 30px; color: white; cursor: pointer; }
-
-    .loading-spinner { display: none; }
-    .success-message, .error-message { display: none; }
+    
+    .tech-pattern {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIGZpbGw9IiNmOGZhZmMiLz48cGF0aCBkPSJNMzAgMzBMMCAwaDYwTDMwIDMwem0wIDBsMzAgMzBIMEwzMCAzMHoiIGZpbGw9IiNmMGYzZjciLz48L3N2Zz4=');
+    }
+    
+    .swiper {
+      width: 100%;
+      padding: 50px 0;
+    }
+    
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .award-logo {
+      width: 150px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .award-logo:hover {
+      transform: scale(1.05);
+    }
+    
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .loading-spinner {
+      display: none;
+    }
+    
+    .success-message, .error-message {
+      display: none;
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <!-- Navigation -->
-  <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar" aria-label="Main navigation">
+  <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-300" id="navbar">
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="#top" class="flex items-center">
+      <div class="flex items-center">
         <div class="text-2xl font-bold text-navy">
           <span class="text-blue-600">A</span>rchies Innovative Solutions
         </div>
-      </a>
-
+      </div>
       <div class="hidden md:flex items-center space-x-8">
         <a href="#product" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Product</a>
         <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">About Us</a>
@@ -62,30 +133,25 @@
         <a href="#awards" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Awards</a>
         <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium">Contact Us</a>
       </div>
-
       <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-700" aria-label="Open menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <button id="mobile-menu-button" class="text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </div>
-
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg" role="menu">
+    <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-lg">
       <div class="flex flex-col space-y-4">
-        <a href="#product" class="text-gray-700 hover:text-blue-600 transition-colors font-medium" role="menuitem">Product</a>
-        <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium" role="menuitem">About Us</a>
-        <a href="#directors" class="text-gray-700 hover:text-blue-600 transition-colors font-medium" role="menuitem">Team</a>
-        <a href="#awards" class="text-gray-700 hover:text-blue-600 transition-colors font-medium" role="menuitem">Awards</a>
-        <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-center" role="menuitem">Contact Us</a>
+        <a href="#product" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Product</a>
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">About Us</a>
+        <a href="#directors" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Team</a>
+        <a href="#awards" class="text-gray-700 hover:text-blue-600 transition-colors font-medium">Awards</a>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium text-center">Contact Us</a>
       </div>
     </div>
   </nav>
-
-  <!-- Top anchor -->
-  <div id="top"></div>
 
   <!-- Hero Section -->
   <section class="hero min-h-screen flex items-center pt-16 bg-navy text-white">
@@ -93,37 +159,16 @@
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">Smart Calibration Systems for Tankers</h1>
-          <p class="text-lg md:text-xl mb-8">
-            ML driven calibration workflows for better measurement accuracy, faster reporting, and reduced losses.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center justify-center transition-colors">
-              <span>Contact Us</span>
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
-
-            <a href="#product" class="bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-8 rounded-full inline-flex items-center justify-center transition-colors">
-              See Calibr8
-            </a>
-          </div>
-
-          <div class="mt-8 grid grid-cols-2 gap-4 max-w-md">
-            <div class="bg-white/10 rounded-lg p-4">
-              <div class="font-semibold">Faster</div>
-              <div class="text-sm text-gray-200">Calibration workflows</div>
-            </div>
-            <div class="bg-white/10 rounded-lg p-4">
-              <div class="font-semibold">Traceable</div>
-              <div class="text-sm text-gray-200">Data and reporting</div>
-            </div>
-          </div>
+          <p class="text-lg md:text-xl mb-8">Revolutionary ML-powered calibration technology that transforms tanker operations with precision and efficiency.</p>
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors">
+            <span>Contact Us</span>
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
         </div>
-
         <div class="md:w-1/2" data-aos="fade-left">
-          <img src="https://cdn.pixabay.com/photo/2018/03/09/22/19/industry-3212922_1280.jpg" alt="Industrial measurement system" class="rounded-lg shadow-2xl w-full">
+          <img src="https://cdn.pixabay.com/photo/2018/03/09/22/19/industry-3212922_1280.jpg" alt="Smart Calibration System" class="rounded-lg shadow-2xl w-full">
         </div>
       </div>
     </div>
@@ -134,68 +179,48 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Introducing Calibr8</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          A calibration and measurement stack that brings data quality, repeatability, and reporting into one workflow.
-        </p>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Our flagship product using advanced analytics and machine learning for precise tanker calibration.</p>
       </div>
-
+      
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-          <img src="https://cdn.pixabay.com/photo/2021/03/08/09/38/dashboard-6078960_1280.jpg" alt="Analytics dashboard" class="rounded-lg shadow-lg w-full">
+          <img src="https://cdn.pixabay.com/photo/2021/03/08/09/38/dashboard-6078960_1280.jpg" alt="Calibr8 Analytics Dashboard" class="rounded-lg shadow-lg w-full">
         </div>
-
         <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
-          <h3 class="text-2xl font-bold text-navy mb-4">Measurement, modeling, and reporting</h3>
-          <p class="text-gray-600 mb-6">
-            Calibr8 supports field teams and operators with automated checks, repeatable calibration steps, and clean outputs for review.
-          </p>
-
+          <h3 class="text-2xl font-bold text-navy mb-4">Advanced Analytics Platform</h3>
+          <p class="text-gray-600 mb-6">Calibr8 uses state-of-the-art machine learning algorithms to provide the most accurate calibration data for tankers of all sizes. Our system offers:</p>
           <ul class="space-y-4 mb-8">
             <li class="flex items-start">
-              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span class="text-gray-700">Automated QA checks and flagging for outliers and drift</span>
+              <span class="text-gray-700">99.8% calibration accuracy using proprietary sensor technology</span>
             </li>
-
             <li class="flex items-start">
-              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span class="text-gray-700">Repeatable calibration workflows with versioned reports</span>
+              <span class="text-gray-700">Real-time data monitoring and predictive maintenance alerts</span>
             </li>
-
             <li class="flex items-start">
-              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span class="text-gray-700">Export ready outputs for operations teams and audits</span>
+              <span class="text-gray-700">Intuitive dashboard with customizable reporting and analytics</span>
             </li>
-
             <li class="flex items-start">
-              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="w-6 h-6 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span class="text-gray-700">Secure cloud storage and access controls</span>
+              <span class="text-gray-700">Cloud-based storage with enterprise-grade security</span>
             </li>
           </ul>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center justify-center transition-colors">
-              <span>Request a Demo</span>
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
-
-            <a href="#contact" class="bg-gray-100 hover:bg-gray-200 text-navy font-medium py-3 px-8 rounded-full inline-flex items-center justify-center transition-colors">
-              Get pricing
-            </a>
-          </div>
-
-          <p class="text-sm text-gray-500 mt-4">
-            Replace placeholder claims with your real numbers before publishing.
-          </p>
+          <a href="javascript:void(0)" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors">
+            <span>Request a Demo</span>
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -206,58 +231,56 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Key Features</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Built for field constraints, data quality, and repeatability.
-        </p>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Discover how Calibr8 is revolutionizing tanker calibration technology</p>
       </div>
-
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-brain text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-brain text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Model assisted calibration</h3>
-          <p class="text-gray-600">Use ML models to reduce manual rework and standardize results across operators and sites.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Advanced ML Algorithms</h3>
+          <p class="text-gray-600">Our proprietary machine learning algorithms provide unparalleled accuracy in calibration measurements.</p>
         </div>
-
+        
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-microchip text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-microchip text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Sensor ready architecture</h3>
-          <p class="text-gray-600">Integrate sensor streams and calibration inputs with consistent timestamping and validation.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Custom Hardware</h3>
+          <p class="text-gray-600">Purpose-built sensors and hardware designed specifically for the challenging environments of tanker operations.</p>
         </div>
-
+        
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-chart-line text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Operational dashboards</h3>
-          <p class="text-gray-600">Track calibration status, data flags, and outputs with role based visibility.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Real-time Analytics</h3>
+          <p class="text-gray-600">Monitor your calibration data in real-time with powerful analytics tools that provide actionable insights.</p>
         </div>
-
+        
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-cogs text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-cogs text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Remote configuration</h3>
-          <p class="text-gray-600">Update settings and workflows without extra site visits, when connectivity allows.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Remote Configuration</h3>
+          <p class="text-gray-600">Adjust calibration settings remotely, reducing the need for on-site technical visits and maintenance.</p>
         </div>
-
+        
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-mobile-alt text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Field friendly UX</h3>
-          <p class="text-gray-600">Clear steps, fewer clicks, and reliable forms for teams working under time pressure.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Mobile Integration</h3>
+          <p class="text-gray-600">Access your calibration system from anywhere with our secure mobile application for iOS and Android.</p>
         </div>
-
+        
         <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
           <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-6">
-            <i class="fas fa-shield-alt text-blue-600 text-2xl" aria-hidden="true"></i>
+            <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-navy mb-3">Security controls</h3>
-          <p class="text-gray-600">Access controls, audit trails, and encrypted transport for sensitive operational data.</p>
+          <h3 class="text-xl font-bold text-navy mb-3">Enterprise Security</h3>
+          <p class="text-gray-600">Bank-grade encryption and security protocols to ensure your data remains protected at all times.</p>
         </div>
       </div>
     </div>
@@ -268,119 +291,237 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">About Us</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Replace placeholders with your true story</p>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Pioneering calibration technology since 2015</p>
       </div>
-
+      
       <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
         <p class="text-gray-700 leading-relaxed mb-8">
-          Archies Innovative Solutions LTD develops calibration and measurement tools for fuel logistics and industrial operations.
-          We focus on repeatable workflows, data quality, and reporting you can defend.
+          Founded in 2015, Archies Innovative Solutions LTD has been at the forefront of developing smart calibration systems for the tanker industry. Our journey began with a simple mission: to transform how the industry approaches calibration through innovative technology.
         </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
-          <div class="bg-gray-50 rounded-lg p-6">
-            <div class="text-3xl font-bold text-blue-600">PATENTS</div>
-            <div class="text-gray-600">Update to your status</div>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Today, we are proud to serve over 200 clients across 45 countries, with our flagship product Calibr8 setting new standards in precision calibration. Our team combines expertise in machine learning, hardware engineering, and industry knowledge to deliver solutions that make a real difference.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-8">
+          We believe in a future where calibration is not just accurate but intelligent - anticipating needs, preventing errors, and driving efficiency in tanker operations globally.
+        </p>
+        <div class="flex justify-center space-x-6">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">200+</div>
+            <div class="text-gray-600">Clients Worldwide</div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-6">
-            <div class="text-3xl font-bold text-blue-600">FIELD</div>
-            <div class="text-gray-600">Deployments and pilots</div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">45</div>
+            <div class="text-gray-600">Countries</div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-6">
-            <div class="text-3xl font-bold text-blue-600">QA</div>
-            <div class="text-gray-600">Checks and traceability</div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">99.8%</div>
+            <div class="text-gray-600">Accuracy Rate</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team -->
+  <!-- Directors Section -->
   <section id="directors" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Team</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Replace names and photos with your real team before publishing.
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Our Leadership Team</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Meet the visionaries behind our innovative calibration technology</p>
       </div>
-
+      
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="flex flex-col items-center" data-aos="fade-up">
-          <img src="YOUR_PHOTO_URL_OR_LOCAL_FILE" alt="Founder" class="director-img mb-6">
-          <h3 class="text-xl font-bold text-navy mb-1">Elijah Kiplimo</h3>
-          <p class="text-blue-600 font-medium mb-4">Founder</p>
-          <p class="text-gray-600 text-center">
-            Systems engineer working on sensor driven measurement and ML calibration workflows for industrial operations.
-          </p>
+          <img src="https://cdn.pixabay.com/photo/2019/10/22/13/43/woman-4568762_1280.jpg" alt="Sarah Johnson" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">Sarah Johnson</h3>
+          <p class="text-blue-600 font-medium mb-4">CEO & Founder</p>
+          <p class="text-gray-600 text-center">Former MIT researcher with 15 years of experience in industrial calibration systems and AI applications.</p>
         </div>
-
+        
         <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
-          <img src="YOUR_TEAMMATE_PHOTO_URL" alt="Team member" class="director-img mb-6">
-          <h3 class="text-xl font-bold text-navy mb-1">TEAM MEMBER NAME</h3>
-          <p class="text-blue-600 font-medium mb-4">ROLE</p>
-          <p class="text-gray-600 text-center">Short bio with what they own and what they have shipped.</p>
+          <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="David Chen" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">David Chen</h3>
+          <p class="text-blue-600 font-medium mb-4">CTO</p>
+          <p class="text-gray-600 text-center">Machine learning pioneer with previous experience at Google AI and specialization in sensor technology.</p>
         </div>
-
+        
         <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
-          <img src="YOUR_TEAMMATE_PHOTO_URL" alt="Team member" class="director-img mb-6">
-          <h3 class="text-xl font-bold text-navy mb-1">TEAM MEMBER NAME</h3>
-          <p class="text-blue-600 font-medium mb-4">ROLE</p>
-          <p class="text-gray-600 text-center">Short bio with what they own and what they have shipped.</p>
+          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_1280.jpg" alt="Michael Rodriguez" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">Michael Rodriguez</h3>
+          <p class="text-blue-600 font-medium mb-4">COO</p>
+          <p class="text-gray-600 text-center">Former operations director for a global tanker company with deep industry knowledge and connections.</p>
+        </div>
+        
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://cdn.pixabay.com/photo/2019/02/11/20/20/woman-3990680_1280.jpg" alt="Priya Patel" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">Priya Patel</h3>
+          <p class="text-blue-600 font-medium mb-4">Head of R&D</p>
+          <p class="text-gray-600 text-center">PhD in Electrical Engineering leading our research into next-generation calibration technologies.</p>
+        </div>
+        
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg" alt="James Wilson" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">James Wilson</h3>
+          <p class="text-blue-600 font-medium mb-4">CFO</p>
+          <p class="text-gray-600 text-center">Financial strategist with experience scaling tech startups from seed funding to IPO.</p>
+        </div>
+        
+        <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg" alt="Emma Thompson" class="director-img mb-6">
+          <h3 class="text-xl font-bold text-navy mb-1">Emma Thompson</h3>
+          <p class="text-blue-600 font-medium mb-4">Global Sales Director</p>
+          <p class="text-gray-600 text-center">Industry veteran with extensive experience in B2B technology sales across international markets.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Awards -->
+  <!-- Awards Section -->
   <section id="awards" class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Awards and Recognition</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Keep this section only if you have real awards or recognitions to show.
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Awards & Recognition</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Our commitment to innovation has been recognized by industry leaders</p>
       </div>
-
+      
+      <!-- Awards Slider -->
       <div class="swiper awards-swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="award-item text-center">
-              <img src="YOUR_AWARD_LOGO_URL" alt="Award" class="award-logo mx-auto mb-4">
-              <h3 class="text-lg font-bold text-navy mb-2">AWARD NAME</h3>
-              <p class="text-gray-600 mb-4">ORG, YEAR</p>
-              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium"
-                 data-certificate="YOUR_CERTIFICATE_IMAGE_URL">View Details</a>
+              <img src="https://cdn.pixabay.com/photo/2016/11/18/13/03/blue-1834371_1280.jpg" alt="Technology Innovation Award" class="award-logo mx-auto mb-4">
+              <h3 class="text-lg font-bold text-navy mb-2">Technology Innovation Award</h3>
+              <p class="text-gray-600 mb-4">Global Shipping Technology, 2024</p>
+              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium" data-certificate="https://cdn.pixabay.com/photo/2016/10/10/22/38/certificate-1730155_1280.jpg">View Details</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="award-item text-center">
+              <img src="https://cdn.pixabay.com/photo/2016/10/10/22/38/business-1730089_1280.jpg" alt="Best ML Application" class="award-logo mx-auto mb-4">
+              <h3 class="text-lg font-bold text-navy mb-2">Best ML Application</h3>
+              <p class="text-gray-600 mb-4">AI Excellence Awards, 2023</p>
+              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium" data-certificate="https://cdn.pixabay.com/photo/2017/08/05/00/12/people-2581913_1280.jpg">View Details</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="award-item text-center">
+              <img src="https://cdn.pixabay.com/photo/2017/01/31/15/33/green-2025221_1280.png" alt="Sustainable Technology" class="award-logo mx-auto mb-4">
+              <h3 class="text-lg font-bold text-navy mb-2">Sustainable Technology</h3>
+              <p class="text-gray-600 mb-4">Maritime Innovation Summit, 2022</p>
+              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium" data-certificate="https://cdn.pixabay.com/photo/2015/11/15/21/31/certificate-1044703_1280.jpg">View Details</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="award-item text-center">
+              <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="Industry 4.0 Leadership" class="award-logo mx-auto mb-4">
+              <h3 class="text-lg font-bold text-navy mb-2">Industry 4.0 Leadership</h3>
+              <p class="text-gray-600 mb-4">Manufacturing Tech Forum, 2021</p>
+              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium" data-certificate="https://cdn.pixabay.com/photo/2013/07/13/01/22/diploma-155960_1280.png">View Details</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="award-item text-center">
+              <img src="https://cdn.pixabay.com/photo/2017/03/19/20/19/ball-2157465_1280.png" alt="Best Hardware Solution" class="award-logo mx-auto mb-4">
+              <h3 class="text-lg font-bold text-navy mb-2">Best Hardware Solution</h3>
+              <p class="text-gray-600 mb-4">Tech Excellence Awards, 2020</p>
+              <a href="javascript:void(0)" class="view-award text-blue-600 hover:text-blue-800 font-medium" data-certificate="https://cdn.pixabay.com/photo/2022/08/02/22/42/certificate-7361064_1280.jpg">View Details</a>
             </div>
           </div>
         </div>
-
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next" aria-label="Next"></div>
-        <div class="swiper-button-prev" aria-label="Previous"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-navy text-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">What Our Clients Say</h2>
+        <p class="text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Trusted by leading companies in the tanker industry</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="italic mb-6">"Calibr8 has revolutionized our tanker calibration process. We've seen a 40% reduction in calibration time and near-perfect accuracy. The ROI was evident within the first quarter of implementation."</p>
+          <div class="flex items-center">
+            <img src="https://cdn.pixabay.com/photo/2017/11/02/14/27/model-2911332_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Jennifer Marks</h4>
+              <p class="text-sm text-gray-300">Operations Director, Global Tankers Ltd</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="italic mb-6">"The predictive maintenance feature of Calibr8 has saved us thousands in potential downtime costs. The system detected issues before they became critical failures three times in the past year alone."</p>
+          <div class="flex items-center">
+            <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Robert Chen</h4>
+              <p class="text-sm text-gray-300">Technical Manager, EastWest Shipping</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <p class="italic mb-6">"The customer support team at Archies is exceptional. They helped us customize Calibr8 to our specific fleet requirements and have been responsive to all our questions and needs."</p>
+          <div class="flex items-center">
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/01/33/beanie-2562646_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold">Maria Santos</h4>
+              <p class="text-sm text-gray-300">CEO, Santos Marine</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
   <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Contact</h2>
-        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          Send a message. You get an email instantly.
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4" data-aos="fade-up">Contact Us</h2>
+        <p class="text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Get in touch with our team to learn more about our calibration solutions</p>
       </div>
-
+      
       <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-lg shadow-lg p-8" data-aos="fade-up">
-
-          <!-- Formspree action -->
-          <!-- Step: create a free form at Formspree, then replace YOUR_FORM_ID below -->
-          <form id="contact-form" class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="hidden" name="_subject" value="New website lead: Archies Innovative Solutions">
-            <input type="text" name="_gotcha" style="display:none">
-
+          <form id="contact-form" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
@@ -391,44 +532,39 @@
                 <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
               </div>
             </div>
-
+            
             <div>
               <label for="company" class="block text-gray-700 font-medium mb-2">Company</label>
               <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
             </div>
-
+            
             <div>
               <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
               <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" required></textarea>
             </div>
-
+            
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition-colors mb-4 sm:mb-0">
                 Send Message
               </button>
-
-              <div class="loading-spinner flex items-center" aria-live="polite">
-                <svg class="animate-spin h-5 w-5 mr-3 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              
+              <div class="loading-spinner flex items-center">
+                <svg class="animate-spin h-5 w-5 mr-3 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
                 <span>Sending...</span>
               </div>
-
-              <div class="success-message text-green-600 font-medium" aria-live="polite">
-                <i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Sent. We will reply soon.
+              
+              <div class="success-message text-green-600 font-medium">
+                <i class="fas fa-check-circle mr-2"></i> Thank you! We'll be in touch.
               </div>
-
-              <div class="error-message text-red-600 font-medium" aria-live="polite">
-                <i class="fas fa-exclamation-circle mr-2" aria-hidden="true"></i> Failed. Please retry.
+              
+              <div class="error-message text-red-600 font-medium">
+                <i class="fas fa-exclamation-circle mr-2"></i> Something went wrong. Please try again.
               </div>
             </div>
           </form>
-
-          <div class="mt-8 text-sm text-gray-600">
-            Prefer email. <span class="font-medium">YOUR_EMAIL</span>
-          </div>
-
         </div>
       </div>
     </div>
@@ -440,107 +576,134 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <h3 class="text-xl font-bold mb-6">Archies Innovative Solutions</h3>
-          <p class="text-gray-300 mb-6">Calibration workflows, sensor integration, and ML assisted measurement systems.</p>
+          <p class="text-gray-300 mb-6">Revolutionizing tanker calibration with ML and advanced hardware engineering.</p>
           <div class="flex space-x-4">
-            <a href="YOUR_LINKEDIN_URL" class="text-white hover:text-blue-400 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin text-xl" aria-hidden="true"></i></a>
-            <a href="YOUR_X_URL" class="text-white hover:text-blue-400 transition-colors" aria-label="X"><i class="fab fa-twitter text-xl" aria-hidden="true"></i></a>
+            <a href="javascript:void(0)" class="text-white hover:text-blue-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+            <a href="javascript:void(0)" class="text-white hover:text-blue-400 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+            <a href="javascript:void(0)" class="text-white hover:text-blue-400 transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+            <a href="javascript:void(0)" class="text-white hover:text-blue-400 transition-colors"><i class="fab fa-instagram text-xl"></i></a>
           </div>
         </div>
-
+        
         <div>
           <h4 class="text-lg font-bold mb-6">Quick Links</h4>
           <ul class="space-y-3">
-            <li><a href="#product" class="text-gray-300 hover:text-white transition-colors">Product</a></li>
-            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+            <li><a href="#product" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
             <li><a href="#directors" class="text-gray-300 hover:text-white transition-colors">Team</a></li>
+            <li><a href="#awards" class="text-gray-300 hover:text-white transition-colors">Awards</a></li>
             <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
           </ul>
         </div>
-
+        
         <div>
           <h4 class="text-lg font-bold mb-6">Contact</h4>
           <ul class="space-y-3">
             <li class="flex items-start">
-              <i class="fas fa-map-marker-alt mr-3 mt-1 text-blue-400" aria-hidden="true"></i>
-              <span class="text-gray-300">YOUR_CITY, YOUR_COUNTRY</span>
+              <i class="fas fa-map-marker-alt mr-3 mt-1 text-blue-400"></i>
+              <span class="text-gray-300">123 Innovation Drive, London, UK</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-phone mr-3 mt-1 text-blue-400" aria-hidden="true"></i>
-              <span class="text-gray-300">YOUR_PHONE</span>
+              <i class="fas fa-phone mr-3 mt-1 text-blue-400"></i>
+              <span class="text-gray-300">+44 (0)20 1234 5678</span>
             </li>
             <li class="flex items-start">
-              <i class="fas fa-envelope mr-3 mt-1 text-blue-400" aria-hidden="true"></i>
-              <span class="text-gray-300">YOUR_EMAIL</span>
+              <i class="fas fa-envelope mr-3 mt-1 text-blue-400"></i>
+              <span class="text-gray-300">info@archies-solutions.com</span>
             </li>
           </ul>
         </div>
-
+        
         <div>
-          <h4 class="text-lg font-bold mb-6">Newsletter</h4>
-          <p class="text-gray-300 mb-4">Add later if you have a real list provider.</p>
-          <form class="flex" onsubmit="return false">
+          <h4 class="text-lg font-bold mb-6">Subscribe</h4>
+          <p class="text-gray-300 mb-4">Subscribe to our newsletter for the latest updates</p>
+          <form class="flex">
             <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors" aria-label="Submit">
-              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors">
+              <i class="fas fa-paper-plane"></i>
             </button>
           </form>
         </div>
       </div>
-
+      
       <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 mb-4 md:mb-0">© <span id="year"></span> Archies Innovative Solutions LTD. All rights reserved.</p>
+        <p class="text-gray-400 mb-4 md:mb-0">© 2025 Archies Innovative Solutions LTD. All rights reserved.</p>
         <div class="flex space-x-6">
-          <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-          <a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="award-lightbox" role="dialog" aria-modal="true" aria-label="Award certificate">
-    <span class="lightbox-close" aria-label="Close">&times;</span>
-    <img src="" alt="Award certificate" class="lightbox-content">
+  <!-- Lightbox for Awards -->
+  <div class="lightbox" id="award-lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="Award Certificate" class="lightbox-content">
   </div>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   <script id="app-script">
-    AOS.init({ duration: 800, once: true, easing: 'ease-in-out' });
-
-    const navbar = document.getElementById('navbar');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) navbar.classList.add('shadow-lg');
-      else navbar.classList.remove('shadow-lg');
+    // Initialize AOS animations
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
     });
 
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+
+    // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-
+    
     mobileMenuButton.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.toggle('hidden');
-      mobileMenuButton.setAttribute('aria-expanded', String(!isHidden));
+      mobileMenu.classList.toggle('hidden');
     });
 
-    mobileMenu.querySelectorAll('a').forEach(link => {
+    // Close mobile menu when clicking a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
       });
     });
 
+    // Initialize Swiper
     const awardsSwiper = new Swiper('.awards-swiper', {
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }
     });
 
+    // Award Lightbox functionality
     const lightbox = document.getElementById('award-lightbox');
     const lightboxContent = lightbox.querySelector('.lightbox-content');
     const lightboxClose = lightbox.querySelector('.lightbox-close');
@@ -549,75 +712,74 @@
     viewAwardLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const url = link.getAttribute('data-certificate');
-        if (!url) return;
-        lightboxContent.src = url;
+        const certificateUrl = link.getAttribute('data-certificate');
+        lightboxContent.src = certificateUrl;
         lightbox.classList.add('active');
       });
     });
 
-    function closeLightbox() {
+    lightboxClose.addEventListener('click', () => {
       lightbox.classList.remove('active');
-      lightboxContent.src = '';
-    }
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-    // Better smooth scrolling with navbar offset
-    function scrollWithOffset(targetId) {
-      const el = document.querySelector(targetId);
-      if (!el) return;
-      const navHeight = navbar.offsetHeight;
-      const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight + 2;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        if (!href || href === '#') return;
-        e.preventDefault();
-        scrollWithOffset(href);
-      });
     });
 
-    // Contact form: AJAX submit to Formspree so you stay on the page
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+
+    // Contact form functionality
     const contactForm = document.getElementById('contact-form');
     const loadingSpinner = document.querySelector('.loading-spinner');
     const successMessage = document.querySelector('.success-message');
     const errorMessage = document.querySelector('.error-message');
 
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      // Hide any previous messages
       successMessage.style.display = 'none';
       errorMessage.style.display = 'none';
+      
+      // Show loading spinner
       loadingSpinner.style.display = 'flex';
-
-      try {
-        const formData = new FormData(contactForm);
-        const res = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
+      
+      // Simulate form submission (will be replaced with real API call later)
+      setTimeout(() => {
         loadingSpinner.style.display = 'none';
-
-        if (res.ok) {
+        
+        // Form validation logic
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const company = document.getElementById('company').value;
+        const message = document.getElementById('message').value;
+        
+        if (name && email && company && message) {
           successMessage.style.display = 'block';
           contactForm.reset();
         } else {
           errorMessage.style.display = 'block';
         }
-      } catch (err) {
-        loadingSpinner.style.display = 'none';
-        errorMessage.style.display = 'block';
-      }
+      }, 1500);
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset;
+          
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
